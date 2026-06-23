@@ -1,0 +1,11 @@
+services:
+  noteapp:
+    build: .
+    image: noteapp:latest
+    container_name: noteapp_container
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./data:/app/data
+    network_mode: host

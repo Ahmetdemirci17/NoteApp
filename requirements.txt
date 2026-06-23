@@ -1,0 +1,11 @@
+# NoteFlow — Python bağımlılıkları
+# Kurulum: pip install -r requirements.txt
+
+# GUI çerçevesi (tkinter standart kütüphanede gelir, ayrıca kurulum gerekmez)
+customtkinter>=5.2.0
+
+
+keyring>=24.0.0
+
+# Windows'ta keyring backend (isteğe bağlı, genellikle otomatik kurulur)
+# pywin32>=306  # Sadece Windows için gerekirse aktif edin
