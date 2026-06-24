@@ -1,147 +1,136 @@
-# 📝 NoteFlow
+📝 NoteFlow
 
-A modern, AI-powered note-taking application built with Python.
+Modern, AI destekli ve Dockerize edilmiş Python tabanlı not alma uygulaması.
 
-NoteFlow is a feature-rich desktop note management application inspired by modern productivity tools. It combines powerful note organization, rich text editing, and AI-assisted workflows into a clean and intuitive interface.
+NoteFlow; güçlü not yönetimi, zengin metin düzenleme araçları ve yapay zeka destekli özellikleri modern ve kullanıcı dostu bir arayüzde bir araya getirir.
 
-## ✨ Features
+✨ Özellikler
+📚 Not Yönetimi
+Not oluşturma, düzenleme ve silme
+Gerçek zamanlı arama
+Etiket tabanlı organizasyon
+Otomatik kayıt
+Kelime ve karakter sayacı
+JSON tabanlı yerel depolama
+🎨 Zengin Metin Düzenleme
+Kalın yazı
+İtalik yazı
+Altı çizili metin
+Metin rengi değiştirme
+Metin vurgulama
+Özel font ve boyut desteği
+Modern düzenleme deneyimi
+🌙 Modern Arayüz
+Açık ve Koyu Tema
+Üç panelli tasarım
+Responsive yapı
+CustomTkinter tabanlı arayüz
+Verimlilik odaklı klavye kısayolları
+🤖 Yapay Zeka Özellikleri
+Gemini AI entegrasyonu
+Not özetleme
+Yazım ve dil bilgisi düzeltme
+Benzer notları birleştirme
+Not içeriklerine göre sohbet desteği
+⌨️ Klavye Kısayolları
+Kısayol	İşlev
+Ctrl + N	Yeni Not
+Ctrl + S	Kaydet
+Ctrl + A	Tümünü Seç
+Ctrl + Shift + A	AI Asistanını Aç
+🛠️ Kullanılan Teknolojiler
+Python 3.12+
+Tkinter
+CustomTkinter
+Google Gemini API
+Keyring
+JSON Storage
+Docker
+Docker Compose
+🚀 Kurulum (Linux)
+1. Ön Gereksinimler
 
-### 📚 Note Management
+Sisteminizde Docker ve Docker Compose kurulu olmalıdır:
 
-* Create, edit, and delete notes
-* Real-time search functionality
-* Tag-based organization
-* Automatic saving
-* Word and character counter
-* Local JSON-based storage
+sudo apt update
+sudo apt install docker.io docker-compose
 
-### 🎨 Rich Text Editing
+sudo usermod -aG docker $USER
 
-* Bold text formatting
-* Italic text formatting
-* Underlined text
-* Text color customization
-* Text highlighting
-* Custom fonts and font sizes
-* Modern editing experience
+Docker grubunun aktif olması için oturumu kapatıp tekrar açın veya yeni bir terminal başlatın.
 
-### 🌙 Modern User Interface
-
-* Light Mode and Dark Mode
-* Three-panel layout
-* Responsive design
-* Built with CustomTkinter
-* Keyboard shortcuts for productivity
-
-### 🤖 AI-Powered Features
-
-* Integrated Gemini AI assistant
-* Note summarization
-* Grammar and spelling correction
-* Merge related notes into a single document
-* Context-aware conversations based on note content
-
-## ⌨️ Keyboard Shortcuts
-
-| Shortcut         | Action            |
-| ---------------- | ----------------- |
-| Ctrl + N         | Create New Note   |
-| Ctrl + S         | Save Note         |
-| Ctrl + A         | Select All Text   |
-| Ctrl + Shift + A | Open AI Assistant |
-
-## 🛠️ Technologies Used
-
-* Python 3.12+
-* Tkinter
-* CustomTkinter
-* Google Gemini API
-* Keyring
-* JSON Storage
-
-## 📦 Installation
-
-### Clone the Repository
-
-```bash
+2. Projeyi Klonlayın
 git clone https://github.com/Ahmetdemirci17/Noteapp.git
+
 cd Noteapp
-```
+3. Uygulamayı Başlatın
 
-### Create a Virtual Environment
+İlk çalıştırmada:
 
-```bash
-python -m venv venv
-```
+docker-compose up -d --build
 
-Linux/macOS:
+Bu komut:
 
-```bash
-source venv/bin/activate
-```
+Docker imajını oluşturur
+Gerekli bağımlılıkları yükler
+Uygulamayı arka planda başlatır
+4. Kullanım
 
-Windows:
+Uygulama arka planda çalışacaktır.
 
-```bash
-venv\Scripts\activate
-```
+Terminalden hızlı başlatmak için ~/.bashrc dosyanıza aşağıdaki satırı ekleyebilirsiniz:
 
-### Install Dependencies
+alias noteapp='cd /path/to/Noteapp && docker-compose up -d'
 
-```bash
-pip install -r requirements.txt
-```
+/path/to/Noteapp kısmını kendi proje dizininiz ile değiştirin.
 
-### Run the Application
+Daha sonra:
 
-```bash
-python main.py
-```
+source ~/.bashrc
 
-## 🧠 AI Capabilities
+ve uygulamayı şu şekilde başlatabilirsiniz:
 
-NoteFlow leverages Google's Gemini AI to:
+noteapp
+🔧 Sorun Giderme
 
-* Summarize long notes
-* Improve grammar and writing quality
-* Merge notes with similar topics
-* Answer questions about your notes
-* Assist with content creation and organization
+Konteyner veya yapılandırma hatalarıyla karşılaşırsanız temiz kurulum yapın:
 
-## 📁 Data Storage
+docker-compose down
 
-All notes and settings are stored locally on the user's machine using JSON files.
+docker-compose up -d --build
+🧠 Yapay Zeka Yetenekleri
 
-Example structure:
+Gemini AI sayesinde:
 
-```text
+Uzun notları özetleme
+Yazım düzeltme
+Benzer notları birleştirme
+Notlar hakkında soru-cevap
+İçerik üretme desteği
+📁 Veri Depolama
+
+Tüm notlar ve ayarlar yerel olarak JSON formatında saklanır.
+
 data/
 ├── notes.json
 └── settings.json
-```
+🚀 Yol Haritası
+Markdown desteği
+PDF dışa aktarma
+Bulut senkronizasyonu
+Çoklu çalışma alanları
+Otomatik AI etiketleme
+Cihazlar arası senkronizasyon
+🔒 Gizlilik
 
-,
+Notlarınız cihazınızda yerel olarak saklanır. Yapay zeka özelliklerini kullanmadığınız sürece hiçbir veri dış servislere gönderilmez.
 
-## 🚀 Roadmap
+📄 Lisans
 
-* Markdown support
-* Cloud synchronization
-* PDF export
-* Advanced text editor tools
-* Multiple notebooks/workspaces
-* AI-powered automatic tagging
-* Cross-device synchronization
+Bu proje MIT Lisansı ile lisanslanmıştır.
 
-## 🔒 Privacy
+👨‍💻 Geliştirici
 
-Your notes are stored locally on your device. No note data is shared externally unless you explicitly use AI-powered features.
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👨‍💻 Developer
-
-**Ahmet Demirci**
+Ahmet Demirci
 
 GitHub: https://github.com/Ahmetdemirci17
