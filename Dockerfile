@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     libxcb-xinerama0 \
     libxcb-xkb1 \
     libxkbcommon-x11-0 \
+    python3-tk \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
