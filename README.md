@@ -1,136 +1,76 @@
-📝 NoteFlow
+# 📝 NoteFlow
 
-Modern, AI destekli ve Dockerize edilmiş Python tabanlı not alma uygulaması.
+A modern, AI-powered note-taking application built with Python.
 
-NoteFlow; güçlü not yönetimi, zengin metin düzenleme araçları ve yapay zeka destekli özellikleri modern ve kullanıcı dostu bir arayüzde bir araya getirir.
+NoteFlow is a feature-rich desktop note management application inspired by modern productivity tools. It combines powerful note organization, rich text editing, and AI-assisted workflows into a clean and intuitive interface.
 
-✨ Özellikler
-📚 Not Yönetimi
-Not oluşturma, düzenleme ve silme
-Gerçek zamanlı arama
-Etiket tabanlı organizasyon
-Otomatik kayıt
-Kelime ve karakter sayacı
-JSON tabanlı yerel depolama
-🎨 Zengin Metin Düzenleme
-Kalın yazı
-İtalik yazı
-Altı çizili metin
-Metin rengi değiştirme
-Metin vurgulama
-Özel font ve boyut desteği
-Modern düzenleme deneyimi
-🌙 Modern Arayüz
-Açık ve Koyu Tema
-Üç panelli tasarım
-Responsive yapı
-CustomTkinter tabanlı arayüz
-Verimlilik odaklı klavye kısayolları
-🤖 Yapay Zeka Özellikleri
-Gemini AI entegrasyonu
-Not özetleme
-Yazım ve dil bilgisi düzeltme
-Benzer notları birleştirme
-Not içeriklerine göre sohbet desteği
-⌨️ Klavye Kısayolları
-Kısayol	İşlev
-Ctrl + N	Yeni Not
-Ctrl + S	Kaydet
-Ctrl + A	Tümünü Seç
-Ctrl + Shift + A	AI Asistanını Aç
-🛠️ Kullanılan Teknolojiler
-Python 3.12+
-Tkinter
-CustomTkinter
-Google Gemini API
-Keyring
-JSON Storage
-Docker
-Docker Compose
-🚀 Kurulum (Linux)
-1. Ön Gereksinimler
+## ✨ Features
 
-Sisteminizde Docker ve Docker Compose kurulu olmalıdır:
+### 📚 Note Management
 
+* Create, edit, and delete notes
+* Real-time search functionality
+* Tag-based organization
+* Automatic saving
+* Word and character counter
+* Local JSON-based storage
+
+### 🎨 Rich Text Editing
+
+* Bold text formatting
+* Italic text formatting
+* Underlined text
+* Text color customization
+* Text highlighting
+* Custom fonts and font sizes
+* Modern editing experience
+
+### 🌙 Modern User Interface
+
+* Light Mode and Dark Mode
+* Three-panel layout
+* Responsive design
+* Built with CustomTkinter
+* Keyboard shortcuts for productivity
+
+### 🤖 AI-Powered Features
+
+* Integrated Gemini AI assistant
+* Note summarization
+* Grammar and spelling correction
+* Merge related notes into a single document
+* Context-aware conversations based on note content
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut         | Action            |
+| ---------------- | ----------------- |
+| Ctrl + N         | Create New Note   |
+| Ctrl + S         | Save Note         |
+| Ctrl + A         | Select All Text   |
+| Ctrl + Shift + A | Open AI Assistant |
+
+## 🛠️ Technologies Used
+
+* Python 3.12+
+* Tkinter
+* CustomTkinter
+* Google Gemini API
+* Keyring
+* JSON Storage
+* Docker & Docker Compose
+
+## 📦 Installation & Setup
+
+Choose one of the following methods to install and run NoteFlow.
+
+### Option 1: Docker Installation (Recommended for Linux)
+
+#### 1. Prerequisites
+Ensure you have Docker and Docker Compose installed on your system:
+
+```bash
 sudo apt update
 sudo apt install docker.io docker-compose
-
 sudo usermod -aG docker $USER
-
-Docker grubunun aktif olması için oturumu kapatıp tekrar açın veya yeni bir terminal başlatın.
-
-2. Projeyi Klonlayın
-git clone https://github.com/Ahmetdemirci17/Noteapp.git
-
-cd Noteapp
-3. Uygulamayı Başlatın
-
-İlk çalıştırmada:
-
-docker-compose up -d --build
-
-Bu komut:
-
-Docker imajını oluşturur
-Gerekli bağımlılıkları yükler
-Uygulamayı arka planda başlatır
-4. Kullanım
-
-Uygulama arka planda çalışacaktır.
-
-Terminalden hızlı başlatmak için ~/.bashrc dosyanıza aşağıdaki satırı ekleyebilirsiniz:
-
-alias noteapp='cd /path/to/Noteapp && docker-compose up -d'
-
-/path/to/Noteapp kısmını kendi proje dizininiz ile değiştirin.
-
-Daha sonra:
-
-source ~/.bashrc
-
-ve uygulamayı şu şekilde başlatabilirsiniz:
-
-noteapp
-🔧 Sorun Giderme
-
-Konteyner veya yapılandırma hatalarıyla karşılaşırsanız temiz kurulum yapın:
-
-docker-compose down
-
-docker-compose up -d --build
-🧠 Yapay Zeka Yetenekleri
-
-Gemini AI sayesinde:
-
-Uzun notları özetleme
-Yazım düzeltme
-Benzer notları birleştirme
-Notlar hakkında soru-cevap
-İçerik üretme desteği
-📁 Veri Depolama
-
-Tüm notlar ve ayarlar yerel olarak JSON formatında saklanır.
-
-data/
-├── notes.json
-└── settings.json
-🚀 Yol Haritası
-Markdown desteği
-PDF dışa aktarma
-Bulut senkronizasyonu
-Çoklu çalışma alanları
-Otomatik AI etiketleme
-Cihazlar arası senkronizasyon
-🔒 Gizlilik
-
-Notlarınız cihazınızda yerel olarak saklanır. Yapay zeka özelliklerini kullanmadığınız sürece hiçbir veri dış servislere gönderilmez.
-
-📄 Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır.
-
-👨‍💻 Geliştirici
-
-Ahmet Demirci
-
-GitHub: https://github.com/Ahmetdemirci17
+# (Log out and log back in, or open a new terminal for changes to take effect)
